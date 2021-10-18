@@ -1,0 +1,1 @@
+# node-cloudfront-image-resizer
