@@ -1,4 +1,4 @@
-type Dimention = {
+export type Dimention = {
   width: number;
   height: number;
 };
