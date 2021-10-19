@@ -5,6 +5,7 @@ import { isAllowCombination, of } from './domain/dimentaion';
 import ParseIntSupport from './lib/support/parse-int';
 import S3Api from './infra/external/s3Api';
 import Resizer from './infra/external/resizer';
+import {Logger} from "./lib/support/logger";
 
 const bucketName = process.env.BUCKET_NAME ?? '';
 const s3Api = new S3Api(bucketName);
@@ -39,6 +40,12 @@ const handler = async (
   };
 
   try {
+    const logger = await Logger()
+    logger.log({
+      level: 'info',
+      message: 'event received',
+      params: event
+    })
     // Cloudfrontが304を返した場合はそのまま返す
     if (response.status === ResponseCodeMap.RESPONSE_ORIGINAL) {
       responseOriginal();

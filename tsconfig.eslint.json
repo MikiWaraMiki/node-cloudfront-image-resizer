@@ -1,10 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "lambda/src/**/*.js",
-    "lambda/src/**/*.ts",
-    "lambda/src/**/*.jsx",
-    "lambda/src/**/*.tsx"
+    "lambda/**/*.js",
+    "lambda/**/*.ts",
+    "lambda/**/*.jsx",
+    "lambda/**/*.tsx"
   ],
   "exclude": [
     "node_modules"
