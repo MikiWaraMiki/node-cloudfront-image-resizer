@@ -1,0 +1,12 @@
+{
+  "extends": "../lambda/viewer_request/tsconfig.json",
+  "include": [
+    "../../cdk/lambda/src/**/*.js",
+    "../../cdk/lambda/src/**/*.ts",
+    "../../cdk/lambda/src/**/*.jsx",
+    "../../cdk/lambda/src/**/*.tsx"
+  ],
+  "exclude": [
+    "../lambda/viewer_request/node_modules"
+  ]
+}

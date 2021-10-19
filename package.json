@@ -1,14 +1,32 @@
 {
+  "name": "cdk",
+  "version": "0.1.0",
+  "bin": {
+    "cdk": "bin/cdk.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "lint": "eslint '../../cdk/lambda/src/**/*.{js,ts}'",
+    "lint:fix": "eslint --fix '../../cdk/lambda/src/**/*.{js,ts}'",
+    "lint:conflict": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "postinstall": "typesync"
+  },
   "devDependencies": {
+    "@aws-cdk/assert": "1.128.0",
     "@types/aws-lambda": "^8.10.84",
     "@types/eslint": "^7.28.1",
-    "@types/node": "^16.11.1",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
     "@types/prettier": "^2.4.1",
     "@types/sharp": "^0.29.2",
     "@types/sizeof": "^1.0.1",
-    "@types/webpack": "^5.28.0",
+    "@types/source-map-support": "^0.5.4",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "aws-cdk": "1.128.0",
     "eslint": "^8.0.1",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -17,20 +35,17 @@
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^26.4.2",
     "prettier": "^2.4.1",
+    "ts-jest": "^26.2.0",
     "ts-loader": "^9.2.6",
+    "ts-node": "^9.0.0",
     "typescript": "^4.4.4",
-    "typesync": "^0.8.0",
-    "webpack": "^5.58.2",
-    "webpack-cli": "^4.9.1"
-  },
-  "scripts": {
-    "lint": "eslint 'src/**/*.{js.ts}",
-    "lint:fix": "eslint --fix 'src/**/*.{js.ts}",
-    "lint:conflict": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "postinstall": "typesync"
+    "typesync": "^0.8.0"
   },
   "dependencies": {
+    "@aws-cdk/core": "1.128.0",
+    "source-map-support": "^0.5.16",
     "aws-sdk": "^2.1010.0",
     "query-string": "^7.0.1",
     "sharp": "^0.29.1",
