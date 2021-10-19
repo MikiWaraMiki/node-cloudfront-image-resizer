@@ -11,5 +11,6 @@ const isSupported = (extetion: string): boolean =>
 
 export const isFileSupported = (filePath: string): boolean => {
   const ext = filePath.split('.')[1];
+
   return isSupported(ext);
 };
